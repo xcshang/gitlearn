@@ -6,7 +6,8 @@ add *.txt  添加所有txt文件(其他还有待研究)
 add .  添加所有文件（包括子目录，但不包括空目录）
 
 commit -m "提交的log信息"  提交所有新添加的文件（不包括修改的文件）  
-
+commit -m "提交的log信息" -a  提交所有新添加或修改的文件
+commit -m "提交的log信息" 2.txt  提交单个文件
 
 .gitignore
 
