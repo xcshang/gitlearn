@@ -1,0 +1,3 @@
+init 创建git仓库
+add .  添加所有文件
+add some.txt  添加1个文件
