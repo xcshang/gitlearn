@@ -3,6 +3,17 @@ init 创建git仓库
 add some.txt  添加1个文件
 add 1.txt 2.txt 添加多个文件
 add *.txt  添加所有txt文件(其他还有待研究)
-add .  添加所有文件
+add .  添加所有文件（包括子目录，但不包括空目录）
 
 commit -m "提交的log信息"
+
+
+.gitignore
+
+添加.gitignore文件并提交
+
+.gitignore文件中可以列出不被git管理的文件
+
+如：表示gyy.txt和module的文件都不会被git管理
+gyy.txt
+module
