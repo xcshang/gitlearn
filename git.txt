@@ -9,6 +9,10 @@ commit -m "提交的log信息"  提交所有新添加的文件（不包括修改的文件）
 commit -m "提交的log信息" -a  提交所有新添加或修改的文件
 commit -m "提交的log信息" 2.txt  提交单个文件
 
+
+checkout head 2.txt  撤销单个文件修改
+checkout head 2.txt  撤销单个文件修改
+
 .gitignore
 
 添加.gitignore文件并提交
