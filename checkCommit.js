@@ -10,8 +10,13 @@ exec(`node test`, (err, stdout, stderr) => {
     process.exit(1)
     return;
   }
-  console.log(stdout+'sxc')
-  
+  if(stdout === 'success'){
+    console.log('test success! commited')
+  	process.exit(0)
+  }else{
+    console.log('test fail! do not commit!')
+  	process.exit(1)
+  }
 
 });
 

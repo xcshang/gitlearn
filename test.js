@@ -6,8 +6,10 @@ var webdriver = require('selenium-webdriver'),
     .build();
 
 driver.get('https://dl.reg.163.com/ydzj/mob?product=urs&curl=https://reg.163.com#/pwdLogin');
-//console.log('success')
-driver.quit('success');
+process.stdout.write('success');
+driver.quit();
+
+
 //driver.findElement(By.className('ipt_input ipt_input_large ipt_input-')).sendKeys('18668423158');
 //driver.findElement(By.className('ipt_input ipt_input_large ipt_input-')).sendKeys('18668423158');
 //driver.findElement(By.className('f-right')).click();
