@@ -1,14 +1,6 @@
 
-
-process.stdout.write("......\n");
-process.stdout.write("确认执行吗(y/n)？");
-process.stdin.on('data',(input)=>{
-	dd()
-})
 //selenium test
-
-function dd(){
-	var webdriver = require('selenium-webdriver'),
+var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
     var driver = new webdriver.Builder()
@@ -22,11 +14,13 @@ async function login() {
 	await driver.findElement(By.linkText('立即登录')).click()
 	await driver.switchTo().frame(driver.findElement(By.tagName("iframe")))
 	await driver.findElement(By.css('input[placeholder=邮箱帐号或手机号]')).sendKeys('lalasxc@126.com')
+	driver.executeScript('alert(1)').ten
 	await driver.findElement(By.name('password')).sendKeys('wjsssrdbb1212!')
 	await driver.findElement(By.id('dologin')).click()
-	await driver.findElement(By.id('dologin')).click()
-	getCookie()
-	
+	driver.sleep(10000).then(() => {
+		driver.findElement(By.id('dologin')).click()
+		getCookie()
+	})
 	
 }
 
@@ -48,8 +42,6 @@ function getCookie(){
 	
 	},2000)
 }
-}
-
 
 
  
