@@ -6,9 +6,21 @@ var webdriver = require('selenium-webdriver'),
     .build();
 
 let options = driver.manage() 
-driver.get('https://m.reg.163.com/?email=1/#/email');
+//driver.get('https://m.reg.163.com/?email=1/#/email');
 
+
+
+async function login() {
+	await driver.get('https://m.reg.163.com/?email=1/#/email')
+	await driver.findElement(By.linkText('立即登录')).click()
+	await driver.switchTo().frame(driver.findElement(By.tagName("iframe")))
+	await driver.findElement(By.css('input[placeholder=邮箱帐号或手机号]')).sendKeys('lalasxc@126.com')
+	await driver.findElement(By.name('password')).sendKeys('wjsssrdbb1212!')
+	driver.findElement(By.id('dologin')).click()
+}
+login()
 setTimeout(() => {
+	return
 	driver.findElement(By.linkText('立即登录')).click()
 	driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 	fillUserName()
@@ -18,7 +30,7 @@ setTimeout(() => {
 
 function fillPassword(){
 	setTimeout(() => {
-	driver.findElement(By.name('password')).sendKeys('wjsssrdbb1212!5')
+	driver.findElement(By.name('password')).sendKeys('wjsssrdbb1212!')
 	loginBtn()
 },1000)
 	
