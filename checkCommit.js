@@ -10,11 +10,8 @@ exec(`node test`, (err, stdout, stderr) => {
     process.exit(1)
     return;
   }
-  if(stdout === 'success'){
-  	process.exit(0)
-  }else{
-  	process.exit(1)
-  }
+  console.log(stdout+'sxc')
+  
 
 });
 
