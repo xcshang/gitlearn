@@ -6,7 +6,7 @@ var webdriver = require('selenium-webdriver'),
     .build();
 
 driver.get('https://dl.reg.163.com/ydzj/mob?product=urs&curl=https://reg.163.com#/pwdLogin');
-//driver.sleep(5000);//毫秒
+driver.sleep(5000);//毫秒
 driver.executeScript('return document.cookie').then(function(obj){
     process.stdout.write('success');
     //process.exit(0)
