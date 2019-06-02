@@ -1,9 +1,4 @@
 
-
-
-
- 
-
 const { exec } = require('child_process');
 
 exec(`node test`, (err, stdout, stderr) => {
@@ -14,13 +9,13 @@ exec(`node test`, (err, stdout, stderr) => {
   }
 
   if(stdout === 'success'){
-    console.log('test success! allow commit')
+    console.log('\033[42;30m ----------------- test success! start commit ----------------- \033[0m')
   	process.exit(0)
   }else{
-    console.log('test fail! not allow commit!')
+    console.log('\033[41;33m ----------------- test fail! forbid commit! ----------------- \033[0m')
   	process.exit(1)
   }
 
 });
- //process.exit(1)
+
 
