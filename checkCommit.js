@@ -4,9 +4,9 @@
 
  
 
-const { execSync } = require('child_process');
+const { exec } = require('child_process');
 
-execSync(`node test`, (err, stdout, stderr) => {
+exec(`node test`, (err, stdout, stderr) => {
   if (err) {
     console.error(err);
     process.exit(1)
@@ -22,5 +22,5 @@ execSync(`node test`, (err, stdout, stderr) => {
   }
 
 });
- process.exit(1)
+ //process.exit(1)
 

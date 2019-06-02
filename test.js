@@ -19,7 +19,7 @@ async function login() {
 	await driver.switchTo().frame(driver.findElement(By.tagName("iframe")))
 	
 	await driver.findElement(By.css('input[placeholder=邮箱帐号或手机号]')).sendKeys('lalasxc@126.com')
-	await driver.findElement(By.name('password')).sendKeys('wjsssrdbb1212!')
+	await driver.findElement(By.name('password')).sendKeys('wjsssrdbb1212!5')
 	await driver.findElement(By.id('dologin')).click()
 	readlineSync.question('继续')
 	await driver.findElement(By.id('dologin')).click()
